@@ -1,0 +1,5 @@
+{
+  "name": "AI Bot Platform",
+  "description": "An application for administrators to create and manage custom AI bots, and for users to log in and interact with them through a chat interface.",
+  "requestFramePermissions": []
+}

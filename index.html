@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Bot Platform</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&family=Cinzel:wght@500;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'primary': '#1a1a2e',      // Deep, inky navy
+              'secondary': '#2c2c54',    // Lighter navy/purple
+              'accent': '#7b2cbf',       // Deep purple
+              'highlight': '#e5bc75',    // Magical gold
+              'light-text': '#dcdde1',   // Moonlight white
+              'hover-highlight': '#f7d794', // Brighter gold
+              'hover-accent': '#9d4edd',    // Brighter purple
+            },
+            fontFamily: {
+              serif: ["'Lora'", 'serif'],
+              display: ["'Cinzel'", 'serif'],
+            },
+            boxShadow: {
+              'lg': '0 5px 20px rgba(0, 0, 0, 0.5)',
+              'xl': '0 8px 35px rgba(229, 188, 117, 0.2)', // Gold glow
+              'button': '0 4px 15px rgba(0, 0, 0, 0.4)',
+              'button-hover': '0 6px 25px rgba(229, 188, 117, 0.3)',
+              'highlight': '0 0 15px rgba(229, 188, 117, 0.5)',
+            },
+            borderRadius: {
+              'card': '12px',
+              'pill': '50px',
+            }
+          },
+        },
+      }
+    </script>
+    <style>
+      body {
+        background-color: #1a1a2e;
+        /* Magical background with star dust and glow */
+        background-image:
+          radial-gradient(circle at 15% 20%, rgba(229, 188, 117, 0.05), transparent 30%), /* Gold mist */
+          radial-gradient(circle at 80% 75%, rgba(123, 44, 191, 0.07), transparent 35%), /* Purple mist */
+          url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><circle fill="%23e5bc75" cx="1" cy="1" r="1" opacity="0.1"/><circle fill="%23e5bc75" cx="10" cy="10" r="1" opacity="0.1"/></svg>'); /* Star dust */
+      }
+      a {
+        transition: color 0.3s ease, text-shadow 0.3s ease;
+      }
+      a:hover {
+        text-shadow: 0 0 8px rgba(229, 188, 117, 0.7); /* Gold glow on hover */
+      }
+      /* Enchanted scrollbar */
+      ::-webkit-scrollbar {
+        width: 12px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #2c2c54; 
+        border-radius: 10px;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #7b2cbf;
+        border-radius: 10px;
+        border: 2px solid #e5bc75;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #9d4edd; 
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.1.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
+    "react/": "https://aistudiocdn.com/react@^19.1.1/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.15.0"
+  }
+}
+</script>
+</head>
+  <body class="bg-primary text-light-text font-serif">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
